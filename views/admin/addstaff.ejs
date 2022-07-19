@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Add Staff</title>
+        <link href="/admin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="/admin/css/sb-admin-2.min.css" rel="stylesheet">
+        <style>
+            .sachin{
+                width: 90%;
+                height: 600px;
+                background: rgb(215, 215, 221);
+                padding: 1em;
+                margin-left: 5%;
+                color: rgb(110, 57, 57);
+                text-shadow:black;
+            }
+            .sac{
+                background: white;
+                height: 33px;
+                border-radius: 7px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <%- include('partials/navbar.ejs')  %>
+        
+
+        <!-- main content -->
+        <div class="sachin">
+            <h1 align="center" style="font-weight: bold;"> ADD NEW STAFF</h1>
+            <br>
+            <br>
+            <form action="/admin/addstaff" method="post" class="col-md-10" style="margin-left: 6em;">
+                <div class="row padd">
+                    <div class="mb-3 col-md-6">
+                        <label for="productname" class="form-label">First Name</label>
+                        <input type="text" pattern="[A-Za-z]{2,}"  title="Invalid Name" class="form-control" id="productname" name="fname" placeholder="Enter first Name"
+                            required>
+                    </div>
+                    
+                    <div class="mb-3 col-md-6">
+                        <label for="productname" class="form-label">Last Name</label>
+                        <input type="text" pattern="[A-Za-z]{1,}"  title="Invalid Name" class="form-control" id="productname" name="lname" placeholder="Enter last name"
+                            required>
+                    </div>
+
+
+                </div>
+
+                <div class="row">
+                    <div class="mb-3 col-md-6">
+                        <label for="productname" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="productname" name="email" placeholder="Enter e-mail id"
+                            required>
+                    </div>
+                    <div class="mb-3 col-md-6">
+                        <label for="productname" class="form-label">Gender</label>
+                        <!-- <select name="category" id="category" style="width: 446px;height: 35px;">
+                            <option value="monitor">monitor</option>
+                            <option value="keyboard">keyboard</option>
+                            <option value="laptop">laptop</option>                        
+                          </select> -->
+                            <br>
+                            <div class="sac">
+                          <input type="radio" name="gender" value="male" required> Male &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="radio" name="gender" value="female" required> Female
+                        </div>
+                              
+
+
+
+
+                        <!-- <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              choose category
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                              <a class="dropdown-item" href="#">Laptop</a>
+                              <a class="dropdown-item" href="#">mouse</a>
+                              <a class="dropdown-item" href="#">monitor</a>
+                            </div>
+                          </div> -->
+                    </div>
+
+
+                </div>
+
+
+                <div class="row">
+                    <div class="mb-3 col-md-6">
+                        <label for="productname" class="form-label">Mobile</label>
+                        <input type="text" pattern="[0-9]{10}" title="Enter a Valid Mobile Number" class="form-control" id="price" name="mobile" placeholder="Enter mobile number"
+                            required>
+                    </div>
+                    <div class="mb-3 col-md-6">
+                        <label for="productname" class="form-label">Zip Code</label>
+                        <input type="text" pattern="[0-9]{6}" title="Enter a valid zipcode" class="form-control" id="price" name="zipcode" placeholder="Enter the zipcode"
+                        required>
+                    </div>
+
+
+                </div>
+
+                <div class="row">
+                    <div class="mb-3 col-md-6">
+                        <label for="productname" class="form-label">District</label>
+                        <input type="text" pattern="[A-Za-z]{2,}"  title="Invalid District" class="form-control" id="productname" name="district" placeholder="Enter the district"
+                            required>
+                    </div>
+                    <div class="mb-3 col-md-6">
+                        <label for="productname" class="form-label">State</label>
+                        <input type="text" pattern="[A-Za-z]{2,}"  title="Invalid State" class="form-control" id="productname" name="state" placeholder="enter the state"
+                            required>
+                    </div>
+
+
+                </div>
+            
+                <br>
+                
+            
+                <div class="mb-3">
+                    <input class="btn btn-primary" type="submit" value="Add Staff" style="margin-left: 41%;
+                    width: 160px;">
+                </div>
+            </form>
+
+
+            
+
+
+
+
+
+
+        </div>
+        <footer class="sticky-footer bg-white ">
+            <div class="container my-auto">
+                <div class="copyright text-center my-auto">
+                    <span>Copyright &copy;IT Park 2020</span>
+                </div>
+            </div>
+        </footer>
+        
+        <!-- end of main content -->
+
+
+
+
+
+            <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
+    </body>
+</html>

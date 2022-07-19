@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Registration IT Park</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- MATERIAL DESIGN ICONIC FONT -->
+		<link rel="stylesheet" href="/registration/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+		
+		<!-- STYLE CSS -->
+		<link rel="stylesheet" href="/registration/css/style.css">
+	</head>
+
+	<body>
+
+		<div class="wrapper" style="background-image: url('/registration/images/bg-registration-form-2.jpg');">
+			<div class="inner">
+				<form action="/register" method="POST">
+					<h3>Registration Form</h3>
+					<div class="form-group">
+						<div class="form-wrapper">
+							<label for="fname">First Name</label>
+							<input type="text" pattern="[A-Za-z]{2,}" id="fname" title="Invalid Name" name="fname" class="form-control" required>
+						</div>
+						<div class="form-wrapper">
+							<label for="">Last Name</label>
+							<input type="text"  pattern="[A-Za-z]{2,}"  title="Invalid Name" name="lname" class="form-control" required>
+						</div>
+					</div>
+					<div class="form-wrapper">
+						<label for="">Email</label>
+						<input type="email" name="email" class="form-control" required>
+					</div>
+					<div class="form-wrapper">
+						<label for="">Mobile</label>
+						<input type="test" pattern="[0-9]{10}" title="Enter a Valid Mobile Number" name="mobile" class="form-control" required>
+					</div>
+					<div class="form-wrapper">
+						<label for="">Username</label>
+						<input type="text" name="username" minlength="5" class="form-control" required>
+					</div>
+					<div class="form-wrapper">
+						<label for="">Password</label>
+						<input type="password" minlength="5" name="password" class="form-control" required>
+					</div>
+					
+					<button >Register Now</button>
+					<small class="error">
+						<% if(typeof(error) !='undefined' ) { %>
+							<%= error %>
+								<% } %>
+					</small>
+				</form>
+			</div>
+		</div>
+		
+	</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
